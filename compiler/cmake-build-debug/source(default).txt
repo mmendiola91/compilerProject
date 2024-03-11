@@ -1,5 +1,4 @@
 main()
-   begin
-    	integer x=5;
-	output("hello world")
-   end main;
+    integer x=5;
+    output("hello world")
+end
