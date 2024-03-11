@@ -1,0 +1,3 @@
+var integer x,y;
+main
+end

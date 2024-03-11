@@ -1,0 +1,3 @@
+/Users/matthewmendiola/CLionProjects/CompilerMAIN/cmake-build-debug/CMakeFiles/CompilerMAIN.dir
+/Users/matthewmendiola/CLionProjects/CompilerMAIN/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/matthewmendiola/CLionProjects/CompilerMAIN/cmake-build-debug/CMakeFiles/rebuild_cache.dir
