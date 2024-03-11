@@ -1,9 +1,5 @@
 # ninja log v5
-7	673	1708533873430917798	CMakeFiles/CompilerMAIN.dir/LexAnalyzer.cpp.o	7173ec978cabca0d
-6	541	1708718880046389334	CMakeFiles/CompilerMAIN.dir/main.cpp.o	7b9725993ef9e8b1
-541	586	1708718880092360237	CompilerMAIN	85f1652f98c02bdb
-6	512	1708718647456394575	CMakeFiles/CompilerMAIN.dir/SyntaxAnalyzer.cpp.o	e86fae4638dbd914
-2	840	1710175857916356287	CMakeFiles/CompilerMAIN.dir/main.cpp.o	a4d85d90efef0090
-3	873	1710175857949982120	CMakeFiles/CompilerMAIN.dir/SyntaxAnalyzer.cpp.o	c5018b0080f4a36a
-2	931	1710175858009473460	CMakeFiles/CompilerMAIN.dir/LexAnalyzer.cpp.o	57c3403ca4ad6c05
-931	988	1710175858070688109	CompilerMAIN	85ba3df8cfdf9cec
+0	736	1710177008430422136	CMakeFiles/compiler.dir/main.cpp.o	432ff74fa5d13679
+0	771	1710177008466510785	CMakeFiles/compiler.dir/SyntaxAnalyzer.cpp.o	164bda1356d105d5
+0	840	1710177008535307760	CMakeFiles/compiler.dir/LexAnalyzer.cpp.o	cda3df8dbad55b95
+840	904	1710177008603398893	compiler	9af56e6cd6d6018a

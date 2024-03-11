@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CompilerMAIN"
+			"path" : "compiler"
 		}
 	],
 	"backtrace" : 1,
@@ -55,7 +55,7 @@
 			]
 		}
 	],
-	"id" : "CompilerMAIN::@6890427a1f51a3e7e1df",
+	"id" : "compiler::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -71,8 +71,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "CompilerMAIN",
-	"nameOnDisk" : "CompilerMAIN",
+	"name" : "compiler",
+	"nameOnDisk" : "compiler",
 	"paths" : 
 	{
 		"build" : ".",

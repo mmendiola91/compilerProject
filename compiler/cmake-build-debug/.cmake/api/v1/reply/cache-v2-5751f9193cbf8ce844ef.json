@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matthewmendiola/CLionProjects/CompilerMAIN/cmake-build-debug"
+			"value" : "/Users/matthewmendiola/Documents/GitHub/compilerProject/compiler/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/matthewmendiola/CLionProjects/CompilerMAIN/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/matthewmendiola/Documents/GitHub/compilerProject/compiler/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matthewmendiola/CLionProjects/CompilerMAIN"
+			"value" : "/Users/matthewmendiola/Documents/GitHub/compilerProject/compiler"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -819,7 +819,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "CompilerMAIN"
+			"value" : "compiler"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1118,7 +1118,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "CompilerMAIN_BINARY_DIR",
+			"name" : "compiler_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1127,10 +1127,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/matthewmendiola/CLionProjects/CompilerMAIN/cmake-build-debug"
+			"value" : "/Users/matthewmendiola/Documents/GitHub/compilerProject/compiler/cmake-build-debug"
 		},
 		{
-			"name" : "CompilerMAIN_IS_TOP_LEVEL",
+			"name" : "compiler_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1142,7 +1142,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "CompilerMAIN_SOURCE_DIR",
+			"name" : "compiler_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/matthewmendiola/CLionProjects/CompilerMAIN"
+			"value" : "/Users/matthewmendiola/Documents/GitHub/compilerProject/compiler"
 		}
 	],
 	"kind" : "cache",

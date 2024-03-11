@@ -1,4 +1,4 @@
-# Install script for directory: /Users/matthewmendiola/CLionProjects/CompilerMAIN
+# Install script for directory: /Users/matthewmendiola/Documents/GitHub/compilerProject/compiler
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/matthewmendiola/CLionProjects/CompilerMAIN/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/matthewmendiola/Documents/GitHub/compilerProject/compiler/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
