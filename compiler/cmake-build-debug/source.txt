@@ -1,4 +1,3 @@
 var integer x, y;
-end
 main
 end
