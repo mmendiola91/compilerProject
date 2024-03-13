@@ -18,17 +18,10 @@ int main() {
         cout << "can't find source file" << endl;
         exit(-1);
     }
-    /// Syntax Analyzer
-    ifstream infile("codelexemes.txt");
-    if (!infile){
-        cout << "error opening lexemes.txt file" << endl;
-        exit(-1);
-    }
-
-
-    ofstream outFile("output.txt");
+    ofstream outFile("codelexemes.txt");
     LexAnalyzer lexAn(lexemeFile);
-    //lexAn.printMap();
+
+//    lexAn.printMap(outFile);
     if (!lexAn.scanFile(sourceFile, outFile)){
         cout << "error in source file" << endl;
     }
@@ -37,6 +30,13 @@ int main() {
     cout << endl;
     cout << endl;
     cout << endl;
+
+    /// Syntax Analyzer
+    ifstream infile("codelexemes.txt");
+    if (!infile){
+        cout << "error opening lexemes.txt file" << endl;
+        exit(-1);
+    }
 
     SyntaxAnalyzer sa(infile);
     sa.parse();

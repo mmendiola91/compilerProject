@@ -4,5 +4,6 @@ t_id x
 s_comma ,
 t_id y
 s_semi ;
+t_end end
 t_main main
 t_end end
