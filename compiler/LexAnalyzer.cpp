@@ -2,9 +2,12 @@
 #include <fstream>
 #include <vector>
 #include <map>
+
 using namespace std;
+
 #include "LexAnalyzer.h"
-LexAnalyzer::LexAnalyzer(istream& infile) {
+
+LexAnalyzer::LexAnalyzer(istream &infile) {
     string tok, lex;
     infile >> tok >> lex;
     while (!infile.eof()) {
@@ -12,7 +15,8 @@ LexAnalyzer::LexAnalyzer(istream& infile) {
         infile >> tok >> lex;
     }
 }
-bool LexAnalyzer::scanFile(istream& infile, ostream& outfile) {
+
+bool LexAnalyzer::scanFile(istream &infile, ostream &outfile) {
     string line;
     getline(infile, line);
     bool error = false;
@@ -23,24 +27,21 @@ bool LexAnalyzer::scanFile(istream& infile, ostream& outfile) {
             while (isspace(line[i])) i++;
 
             if (isalpha(line[i])) {
-                if (i > 0 && !isspace(line[i-1]) && inMap(line[i-1]) == tokenmap.end())
+                if (i > 0 && !isspace(line[i - 1]) && inMap(line[i - 1]) == tokenmap.end())
                     error = true;
                 else
                     keywordIdCheck(line, i);
-            }
-            else if (isdigit(line[i])){
-                if (i > 0 && !isspace(line[i-1]) && inMap(line[i-1]) == tokenmap.end())
+            } else if (isdigit(line[i])) {
+                if (i > 0 && !isspace(line[i - 1]) && inMap(line[i - 1]) == tokenmap.end())
                     error = true;
                 else
                     error = integerCheck(line, i);
-            }
-            else if (line[i] == '"'){
-                if (i > 0 && !isspace(line[i-1]) && inMap(line[i-1]) == tokenmap.end())
+            } else if (line[i] == '"') {
+                if (i > 0 && !isspace(line[i - 1]) && inMap(line[i - 1]) == tokenmap.end())
                     error = true;
                 else
                     error = textCheck(line, i);
-            }
-            else{ //gray area stuff
+            } else { //gray area stuff
                 error = symbolsCheck(line, i);
             }
             //i++;
@@ -50,7 +51,8 @@ bool LexAnalyzer::scanFile(istream& infile, ostream& outfile) {
     // return true if scanfile works and false otherwise
     return !error;
 }
-void LexAnalyzer::keywordIdCheck(string line, int& i){
+
+void LexAnalyzer::keywordIdCheck(string line, int &i) {
     string tempLex = "";
     // pull off characters until isspace or non-alpha or non-underscore
     do {
@@ -70,7 +72,8 @@ void LexAnalyzer::keywordIdCheck(string line, int& i){
     }
     tempLex = "";
 }
-bool LexAnalyzer::integerCheck(string line, int& i){
+
+bool LexAnalyzer::integerCheck(string line, int &i) {
     string tempLex = "";
     bool error = false;
     // pull off characters until non digit
@@ -88,33 +91,34 @@ bool LexAnalyzer::integerCheck(string line, int& i){
     while (isspace(line[i])) i++;
     return error;
 }
-bool LexAnalyzer::textCheck(string line, int& i){
+
+bool LexAnalyzer::textCheck(string line, int &i) {
     string tempLex = "";
     bool error = false;
     // pull off characters until " or end of line found
     i++;
-    while (i<line.size() && line[i] != '"'){
+    while (i < line.size() && line[i] != '"') {
         tempLex += line[i];
         i++;
     }
-    if (line[i] == '"'){
+    if (line[i] == '"') {
         lexemes.push_back(tempLex);
         tokens.push_back("t_text");
         i++;
-    }
-    else{
+    } else {
         error = true;
     }
     while (isspace(line[i])) i++;
     return error;
 }
-bool LexAnalyzer::symbolsCheck(string line, int& i){
+
+bool LexAnalyzer::symbolsCheck(string line, int &i) {
     // this function was causing errors
     // i must be left at next character to analyze
     bool error = false;
-    switch(line[i]) {
+    switch (line[i]) {
         case '<' :
-            if (i < line.size() && line[i+1] == '=') {
+            if (i < line.size() && line[i + 1] == '=') {
                 i++;
                 lexemes.push_back("<=");
                 tokens.push_back("s_le");
@@ -124,7 +128,7 @@ bool LexAnalyzer::symbolsCheck(string line, int& i){
             }
             break;
         case '>' :
-            if (i < line.size() && line[i+1] == '=') {
+            if (i < line.size() && line[i + 1] == '=') {
                 i++;
                 lexemes.push_back(">=");
                 tokens.push_back("s_ge");
@@ -134,7 +138,7 @@ bool LexAnalyzer::symbolsCheck(string line, int& i){
             }
             break;
         case '=' :
-            if (i < line.size() && line[i+1] == '=') {
+            if (i < line.size() && line[i + 1] == '=') {
                 i++;
                 lexemes.push_back("==");
                 tokens.push_back("s_eq");
@@ -144,7 +148,7 @@ bool LexAnalyzer::symbolsCheck(string line, int& i){
             }
             break;
         case '!' :
-            if (i < line.size() && line[i+1] == '=') {
+            if (i < line.size() && line[i + 1] == '=') {
                 i++;
                 lexemes.push_back("!=");
                 tokens.push_back("s_ne");
@@ -167,32 +171,36 @@ bool LexAnalyzer::symbolsCheck(string line, int& i){
     i++;
     return error;
 }
-map<string, string>::iterator LexAnalyzer::inMap(char x){
+
+map<string, string>::iterator LexAnalyzer::inMap(char x) {
     string t;
     t = x;
     return tokenmap.find(t);
 }
-bool LexAnalyzer::isKeyword(string s){
-    if (s=="and" || s == "input" || s == "output" || s == "end" ||
-        s == "integer" || s=="string" || s == "var" || s == "else" ||
-        s=="while" || s == "if" || s == "loop" ||
-        s == "or" || s=="then" || s == "main")
+
+bool LexAnalyzer::isKeyword(string s) {
+    if (s == "and" || s == "input" || s == "output" || s == "end" ||
+        s == "integer" || s == "string" || s == "var" || s == "else" ||
+        s == "while" || s == "if" || s == "loop" ||
+        s == "or" || s == "then" || s == "main")
         return true;
     else
         return false;
 
 }
-void LexAnalyzer::printVectors(ostream& out){
+
+void LexAnalyzer::printVectors(ostream &out) {
     cout << "Token and Lexemes for Source Code" << endl;
-    for (int i=0; i<lexemes.size(); i++){
+    for (int i = 0; i < lexemes.size(); i++) {
         cout << tokens[i] << " " << lexemes[i] << endl;
         out << tokens[i] << " " << lexemes[i] << endl;
     }
 }
-void LexAnalyzer::printMap(ostream& out){
+
+void LexAnalyzer::printMap(ostream &out) {
     cout << "Token and Lexemes for Language" << endl;
     // datatype for itr is map<string, string>::iterator
-    for(auto itr=tokenmap.begin(); itr!=tokenmap.end(); itr++) {
+    for (auto itr = tokenmap.begin(); itr != tokenmap.end(); itr++) {
         cout << itr->first << " " << itr->second << endl;
     }
 }
