@@ -1,7 +1,14 @@
-var integer x, y;
+var
+    integer x;
+    string y;
 main
-if ( 5 > 3 )
-then
-x = 5;
-end if
+    input(x)
+    output(x)
+    x = x + 5 * 2;
+    output(x)
+    if(x<3) then
+        output("hello")
+    else
+        output("world")
+   end if
 end

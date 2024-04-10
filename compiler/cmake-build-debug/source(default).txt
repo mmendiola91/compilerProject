@@ -1,4 +1,7 @@
-main()
-    integer x=5;
-    output("hello world")
+var integer x, y;
+main
+if ( 5 > 3 )
+then
+x = 5;
+end if
 end

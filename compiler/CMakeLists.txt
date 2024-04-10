@@ -7,4 +7,5 @@ add_executable(compiler main.cpp
         LexAnalyzer.cpp
         LexAnalyzer.h
         SyntaxAnalyzer.cpp
-        SyntaxAnalyzer.h)
+        SyntaxAnalyzer.h
+)

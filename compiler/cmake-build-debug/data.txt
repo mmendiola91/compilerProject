@@ -1,6 +1,6 @@
 t_var var
 t_integer integer
-t_id x
+t_id  x
 s_semi ;
 t_string string
 t_id y
@@ -44,4 +44,12 @@ t_text world
 s_rparen )
 t_end end
 t_if if
+t_id y
+s_assign =
+t_text hello world
+s_semi ;
+t_output output
+s_lparen (
+t_id y
+s_rparen )
 t_end end
